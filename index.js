@@ -36,7 +36,7 @@ app.delete("/api/games/:gameId", function(req, res) {
 app.patch("/api/games/:gameId", function(req, res) {
     const gameId = req.params.gameId;
     const index = games.findIndex(game => game.id.toString() === gameId);
-    gameOptions.forEach(option => games[index][option] = req.body[option] ? req.body[option] : games[index][option]);
+    gameOptions.slice(1).forEach(option => games[index][option] = req.body[option] ? req.body[option] : games[index][option]);
     res.send();
 });
 
