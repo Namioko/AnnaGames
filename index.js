@@ -1,6 +1,6 @@
-var GamesController = require("./gamesController.js");
-var express = require("express");
-var app = express();
+const GamesController = require("./gamesController.js");
+const express = require("express");
+const app = express();
 
 app.use(express.json()); // support json encoded bodies
 app.use(express.raw()); // support raw encoded bodies

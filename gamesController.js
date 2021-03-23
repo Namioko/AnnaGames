@@ -1,32 +1,37 @@
-function GamesController(games) {
-    this.games = games ? games : [];
-    this.gameOptions = ["id", "name", "creationDate", "genre", "description"];
+const {GAME_OPTIONS} = require("./constants.js");
 
-    this.getAllGames = function() {
+function GamesController(games) {
+    this.games = games ? [...games] : [];
+    this.gameOptions = GAME_OPTIONS;
+
+    this.getAllGames = () => {
         return this.games.map(game => ({
             id: game.id,
             name: game.name
         }));
     }
 
-    this.getOneGameById = function(id) {
+    this.getOneGameById = (id) => {
         return this.games.find(game => game.id.toString() === id)
     }
 
-    this.addGame = function(options) {
+    this.addGame = (options) => {
         const newGame = {};
         this.gameOptions.forEach(option => newGame[option] = options[option]);
-        games.push(newGame);
+        this.games.push(newGame);
     }
 
-    this.deleteGameById = function (id) {
-        const index = games.findIndex(game => game.id.toString() === id);
-        return games.splice(index, 1).length > 0;
+    this.deleteGameById = (id) => {
+        const index = this.games.findIndex(game => game.id.toString() === id);
+        if (index >= 0) {
+            this.games.splice(index, 1);
+        }
+        return index >= 0;
     }
 
-    this.changeGameById = function (id, newOptions) {
-        const index = games.findIndex(game => game.id.toString() === id);
-        this.gameOptions.slice(1).forEach(option => games[index][option] = newOptions[option] ? newOptions[option] : games[index][option]);
+    this.changeGameById = (id, newOptions) => {
+        const index = this.games.findIndex(game => game.id.toString() === id);
+        this.games[index] && this.gameOptions.slice(1).forEach(option => this.games[index][option] = newOptions[option]);
         return index >= 0;
     }
 }
