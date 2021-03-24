@@ -19,6 +19,7 @@ function GamesController(games) {
         const newGame = {};
         this.gameOptions.forEach(option => newGame[option] = options[option]);
         this.games.push(newGame);
+        return newGame;
     }
 
     this.deleteGameById = (id) => {
