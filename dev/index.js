@@ -14,7 +14,7 @@ app.get("/api/games", function (req, res) {
 });
 app.get("/api/games/:gameId", function (req, res) {
     const gameId = req.params.gameId;
-    const game = gamesController.getOneGameById(gameId);
+    const game = gamesController.getGameById(gameId);
     if (game) {
         res.json(game);
     } else {

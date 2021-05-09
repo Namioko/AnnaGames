@@ -1,16 +1,16 @@
-[
-  {
+{
+  "123": {
     "id": 123,
     "name": "CS",
     "creationDate": "11/8/2000",
     "genre": "shooter",
     "description": "Counter-terrorists are fighting against terrorists"
   },
-  {
+  "567": {
     "id": 567,
     "name": "The Witcher 3",
     "creationDate": "5/18/2015",
     "genre": "RPG",
     "description": "Geralt of Rivia is trying to find his so-called daughter"
   }
-]
+}

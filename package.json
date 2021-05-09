@@ -1,7 +1,7 @@
 {
   "name": "annagames",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dev/index.js",
   "scripts": {
     "test": "jest"
   },
