@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "dev/index.js",
   "scripts": {
+    "start": "node dev/index.js",
     "test": "jest"
   },
   "author": "",

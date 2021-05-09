@@ -7,8 +7,8 @@
 1.5. заменить массив games "словарём" (объектом)  
 1.6. переделать все методы в связи с пунктом 1.5  
 
-- [ ] GamesRequestController - перекинуть все реквесты в методы  
-- [ ] index.js -> apiRouter.js и htmlRouter.js  
+- [x] GamesRequestController - перекинуть все реквесты в методы  
+- [x] index.js -> apiRouter.js и htmlRouter.js  
 - [ ] в htmlRouter.js: /games (список с кнопками details и delete) и /games/id  
 - [ ] подключить вебпак  
 - [ ] написать страницы на реакте с функциональными компонентами и использованием хуков  
