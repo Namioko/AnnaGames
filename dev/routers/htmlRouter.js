@@ -1,4 +1,4 @@
 function setupHtmlRouter(app, gamesController) {
 }
 
-module.exports = setupHtmlRouter;
+export default setupHtmlRouter;

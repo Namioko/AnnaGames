@@ -1,3 +1,5 @@
+import GamesController from "./gamesController";
+
 function GamesRequestController(gamesController) {
     this.getGames = (req, res) => {
         res.json(gamesController.getAllGames());
@@ -44,4 +46,4 @@ function GamesRequestController(gamesController) {
     }
 }
 
-module.exports = GamesRequestController;
+export default GamesRequestController;

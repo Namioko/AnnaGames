@@ -51,4 +51,4 @@ function GamesController(games) {
     }
 }
 
-module.exports = GamesController;
+export default GamesController;

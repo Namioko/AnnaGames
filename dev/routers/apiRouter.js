@@ -1,4 +1,4 @@
-const GamesRequestController = require("../gamesRequestController.js");
+import GamesRequestController from "../controllers/gamesRequestController.js";
 
 function setupApiRouter(app, gamesController) {
     const gamesRequestController = new GamesRequestController(gamesController);
@@ -10,4 +10,4 @@ function setupApiRouter(app, gamesController) {
     app.patch("/api/games/:gameId", gamesRequestController.changeGameById);
 }
 
-module.exports = setupApiRouter;
+export default setupApiRouter;

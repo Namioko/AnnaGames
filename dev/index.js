@@ -1,8 +1,8 @@
-const express = require("express");
-const GamesController = require("./gamesController.js");
-const games = require("./games.json");
-const setupApiRouter = require("./routers/apiRouter");
-const setupHtmlRouter = require("./routers/htmlRouter");
+import express from "express";
+import GamesController from  "./controllers/gamesController.js";
+import games from "./data/games.json";
+import setupApiRouter from "./routers/apiRouter";
+import setupHtmlRouter from "./routers/htmlRouter";
 
 const app = express();
 

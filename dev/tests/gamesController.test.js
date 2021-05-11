@@ -1,4 +1,4 @@
-const GamesController = require("../gamesController.js");
+const GamesController = require("../controllers/gamesController.js");
 
 const GAME_PROPS = ["id", "name", "creationDate", "genre", "description"];
 
